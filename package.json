@@ -1,0 +1,21 @@
+{
+  "name": "makeymaker",
+  "description": "A tiny JavaScript library for making stuff with the [Makey Makey Go",
+  "author": {
+    "name": "George White",
+    "email": "stonehippo@gmail.com",
+    "url": "https://github.com/stonehippo"
+  },
+  "repository": "git",
+  "url": "https://github.com/stonehippo/makeymaker.js",
+  "license": "MIT",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+      "tape": "^4.4.0"
+  },
+  "config": {},
+  "scripts": {
+    "test": "tape test/makeymaker-test.js"
+  }
+}
