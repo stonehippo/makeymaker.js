@@ -12,10 +12,10 @@
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
-      "tape": "^4.4.0"
+    "tape": "^4.4.0"
   },
   "config": {},
   "scripts": {
-    "test": "tape test/makeymaker-test.js"
+    "test": "./node_modules/tape/bin/tape test/makeymaker-test.js"
   }
 }
