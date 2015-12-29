@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Makey Maker Example</title>
+  </head>
+  <body>
+    <p>
+      You clicked on this page <span class="counter">0</span> times!
+    </p>
+    <script src="../src/makeymaker.js"></script>
+    <script>
+      window.makeymaker.listenWith(function() {
+        var counterElement = document.querySelector(".counter");
+        counterElement.innerText = parseInt(counterElement.innerText, 10) + 1;
+      });
+    </script>
+  </body>
+</html>
