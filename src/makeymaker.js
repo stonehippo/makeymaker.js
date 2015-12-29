@@ -1,4 +1,4 @@
-var makeymaker = (function() {
+window.makeymaker = (function() {
   var mmgEventTypes = {
     SPACE: {
       type: "keypress",
@@ -55,4 +55,4 @@ var makeymaker = (function() {
     listenWith: listenWith,
     registerEventType: registerEventType
   };
-})(window.makeymaker);
+})();
