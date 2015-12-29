@@ -15,6 +15,8 @@ window.makeymaker = (function() {
     if (event.type === "keypress" && event.charCode !== currentEventType.character.charCodeAt(0)) {
       return;
     }
+    event.preventDefault();
+    event.stopPropagation();
     callback.call(this, event);
   };
 
