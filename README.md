@@ -39,7 +39,9 @@ To set the event type, do something like:
 window.makeymaker.listenFor("SPACE");
 ```
 
-See
+See `registerEventType` for more info.
+
+Also, note that Makey Maker makes use of JavaScript event capturing. Since Makey Maker attaches its event listener to the document, it makes sense to use capturing rather than bubbling. Since the event handler will prevent the default action and the propagation of any events, capturing will lead to no side effects beyond the processing of the explicit handler method. The event needs to propagate beyond the handler, developers have to explicitly create a new event to handle additional behaviors.
 
 #### listenWith
 
