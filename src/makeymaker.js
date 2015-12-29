@@ -27,7 +27,7 @@ window.makeymaker = (function() {
   var currentEventType = mmgEventTypes.LEFT_CLICK;
 
   function registerEvent(mmgEvent) {
-    document.addEventListener(mmgEvent.type, handler, false);
+    document.addEventListener(mmgEvent.type, handler, true);
   }
 
   function unregisterEvent(mmgEvent) {
