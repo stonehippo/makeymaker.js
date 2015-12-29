@@ -1,3 +1,10 @@
+/*
+ * Makey Maker - A tiny JavaScript library for making stuff with the Makey Makey Go
+ *
+ * Copyright (c) 2015 George White <stonehippo@gmail.com>
+ *
+ * This file is covered by the MIT License. See LICENSE for details.
+ */
 window.makeymaker = (function() {
   var mmgEventTypes = {
     SPACE: {
