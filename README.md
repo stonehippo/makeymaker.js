@@ -1,10 +1,11 @@
 # Makey Maker
 
-A tiny JavaScript library for making stuff with the [Makey Makey Go](http://http://shop.makeymakey.com/products/makey-makey-go).
+A tiny JavaScript library for making stuff with the [Makey Makey Go](http://http://shop.makeymakey.com/products/makey-makey-go) in your Web browser.
 
 ## About
 
 The Makey Makey Go is a simple device for connecting real-world stuff to computers. It turns more-or-less conductive things into touch interfaces. This means you can make almost anything into a touchable button. Want a banana button? Makey Makey Go can help!
+
 Need a doughnut control? Again, Makey Makey Go is the answer!
 
 Makey Maker is a tiny, easy-to-use JavaScript library for working with the Makey Makey Go in your browser.
@@ -41,11 +42,11 @@ window.makeymaker.listenFor("SPACE");
 
 See `registerEventType` for more info.
 
-Also, note that Makey Maker makes use of JavaScript event capturing. Since Makey Maker attaches its event listener to the document, it makes sense to use capturing rather than bubbling. Since the event handler will prevent the default action and the propagation of any events, capturing will lead to no side effects beyond the processing of the explicit handler method. The event needs to propagate beyond the handler, developers have to explicitly create a new event to handle additional behaviors.
+Also, note that Makey Maker makes use of JavaScript event capturing. Since Makey Maker attaches its event listener to the window, it makes sense to use capturing rather than bubbling. Since the event handler will prevent the default action and the propagation of any events, capturing will lead to no side effects beyond the processing of the explicit handler method. If the event needs to propagate beyond the handler, developers have to explicitly create a new event to handle additional behaviors.
 
 #### listenWith
 
-Register a callback method to handle the Makey Makey Go event. And previous callback method is replaced.
+Register a callback method to handle the Makey Makey Go event. Any previous callback method is replaced.
 
 To set the callback, do something like:
 
@@ -72,7 +73,7 @@ window.makeymaker.listenFor("LEFT_CLICK");
 
 The left click is the preset event when the library loads.
 
-It's possible to change the event type sent from the Makey Makey Go via the [remap page](). If you do change the event, you'll want to enable Makey Maker support. To do this, you need to register a new event type. For, example, to tell the library to listen for key presses on "m":
+It's possible to change the event type sent from the Makey Makey Go via the [remap page](). If you do change the event, you'll want to enable Makey Maker support in this library as well. To do this, you need to register a new event type. For, example, to tell the library to listen for key presses on "m":
 
 ```
 window.makeymaker.registerEventType("LOWER_M_PRESS", {
